@@ -1,0 +1,29 @@
+<!-- *ngFor循环 -->
+<ul>
+  <li *ngFor="let item of list; let idx = index">{{ idx + "->" + item }}</li>
+</ul>
+
+<!-- *ngIf 条件判断 -->
+<div *ngIf="isMember"><h2>欢迎会员</h2></div>
+
+<!-- 多重条件判断 -->
+<div [ngSwitch]="true">
+  <p *ngSwitchCase="score > 80">优秀</p>
+  <p *ngSwitchCase="score<80&&score>=70">良好</p>
+  <p *ngSwitchCase="score<70&&score >= 60">及格</p>
+  <p *ngSwitchDefault>不及格</p>
+</div>
+
+<span [ngSwitch]="isMember">
+  <p *ngSwitchCase="true">欢迎回家</p>
+  <p *ngSwitchCase="false">走你</p>
+  <p *ngSwitchDefault>告知姓名</p>
+</span>
+
+<div [ngSwitch]='answer'>
+  <p *ngSwitchCase="'a'">a</p>
+  <p *ngSwitchCase="'b'">b</p>
+  <p *ngSwitchCase="'c'">c</p>
+  <p *ngSwitchCase="'d'">d</p>
+  <p *ngSwitchDefault>请输入答案</p>
+</div>

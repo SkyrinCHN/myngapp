@@ -1,0 +1,8 @@
+<ul>
+  <ng-container *ngFor="let item of Students;let idx = index">
+    <li *ngIf="item.score>60">
+      {{idx}}=>{{item.id}}=>{{item.name}}=>{{item.score}}
+    </li>
+  </ng-container>
+
+</ul>
